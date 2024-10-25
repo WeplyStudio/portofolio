@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | JDev</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            margin:0px
+            padding:0px
+        }
+        /* Custom styles */
+        .bg-hero {
+            background-color: #1a202c;
+            background-size: cover;
+            background-position: center;
+        }
+        /* Typing effect */
+        .typing-effect {
+            border-right: 2px solid white;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: typing 4s steps(10, end), blink-caret .75s step-end infinite;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
+        }
+
+        @keyframes blink-caret {
+            from, to {
+                border-color: transparent;
+            }
+            50% {
+                border-color: white;
+            }
+        }
+        #sidemenu {
+            z-index: 1001
+        }
+    </style>
+</head>
+<body>
+
+   <!-- Navbar -->
+  <nav class="bg-white p-4 fixed" style="width:100%;z-index:500">
+    <div class="container mx-auto flex justify-between items-center">
+      <div class="scramble-text text-gray text-3xl font-bold"></div>
+      <div class="hidden md:flex space-x-4">
+        <a href="#" class="text-gray hover:text-white">Home</a>
+        <a href="#" class="text-gray hover:text-white">About</a>
+        <a href="#" class="text-gray hover:text-white">Services</a>
+        <a href="#" class="text-gray hover:text-white">Contact</a>
+      </div>
+      <div class="md:hidden">
+        <button id="menu-btn" class="text-gray focus:outline-none">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Sidemenu -->
+  <div id="sidemenu" class="fixed left-0 top-0 w-64 h-full bg-gray-800 text-white transform -translate-x-full transition-transform duration-300">
+    <div class="p-4">
+      <h2 class="text-2xl font-bold mb-6">JDev</h2>
+      <ul class="space-y-4">
+        <li><a href="#" class="hover:text-gray-300">Home</a></li>
+        <li><a href="#" class="hover:text-gray-300">About</a></li>
+        <li><a href="#" class="hover:text-gray-300">Services</a></li>
+        <li><a href="#" class="hover:text-gray-300">Contact</a></li>
+      </ul>
+    </div>
+    <button id="close-btn" class="absolute top-4 right-4 focus:outline-none">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+  </div>
+
+        <!-- Hero Section -->
+        <section id="hero" class="min-h-screen flex items-center justify-center bg-hero">
+            <div class="fade-section text-center">
+                <h2 class="fade-section  text-5xl font-extrabold mb-4 text-white">
+                    Hi, I'm a <span id="typing-text" class="typing-effect"></span>
+                </h2>
+                <p class="fade-section  text-xl mb-6 text-gray-200">Creating ultra-modern and professional web experiences</p>
+                <button type="submit" class="py-3 bg-white text-gray rounded-lg hover:bg-white-400 transition font-semibold" style="width:75%">Get Started</button>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-16 bg-gray-100">
+            <div class="container mx-auto px-8">
+                <h2 class="fade-section text-4xl font-bold text-center mb-12 text-gray-500" style="color: #1a202c">About Me</h2>
+                <div class="flex flex-col lg:flex-row items-center justify-between">
+                    <img src="https://placehold.co/250/1a202c/white?text=JDev&font=Montserrat" alt="Profile Picture" class="fade-section rounded-full mb-8 lg:mb-0 lg:mr-8 shadow-lg">
+                    <div class="fade-section text-lg text-gray-700">
+                        <p>I am a skilled full-stack developer with expertise in both frontend and backend development, specializing in creating robust, scalable, and user-centric web and mobile applications. Proficient in modern technologies, I deliver responsive, high-performance solutions focused on optimizing user experience and driving business success.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-16 bg-gray-800" style="background-color: #1a202c">
+            <div class="container mx-auto px-8">
+                <h2 class="fade-section text-4xl font-bold text-center mb-12 text-gray-500" style="color: #fff">My Projects</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project 1 -->
+                    <div class="fade-section bg-white p-6 rounded-lg shadow-lg transition hover:shadow-2xl">
+                        <img src="https://placehold.co/450/1a202c/white?text=Tools%0ACatatan+Kas&font=Montserrat" alt="Project 1" class="fade-section  mb-4 rounded-lg shadow-lg">
+                        <h3 class="fade-section text-xl font-semibold mb-2 text-gray-500" style="color: #1a202c">Tools Kas</h3>
+                        <p class="fade-section text-gray-600">Tools yang dapat mempermudah dalam mencatat keuangan kas sekolah maupun pribadi dan keperluan lainnya!.</p>
+                    </div>
+                    <!-- Project 2 -->
+                    <div class="fade-section bg-white p-6 rounded-lg shadow-lg transition hover:shadow-2xl">
+                        <img src="https://placehold.co/450/1a202c/white?text=Tools%0APengatur%0AKeuangan&font=Montserrat" alt="Project 1" class="fade-section  mb-4 rounded-lg shadow-lg">
+                        <h3 class="fade-section text-xl font-semibold mb-2 text-gray-500" style="color: #1a202c">Pengatur Keuangan</h3>
+                        <p class="fade-section text-gray-600">Tools yang dapat mempermudah dalam mencatat keuangan pribadi anda sehari hari!.</p>
+                    </div>
+                    <!-- Project 3 -->
+                    <div class="fade-section bg-white p-6 rounded-lg shadow-lg transition hover:shadow-2xl">
+                        <img src="https://placehold.co/450/1a202c/white?text=Tools%0APengingat%0ATagihan&font=Montserrat" alt="Project 1" class="fade-section  mb-4 rounded-lg shadow-lg">
+                        <h3 class="fade-section text-xl font-semibold mb-2 text-gray-500" style="color: #1a202c">Pengingat Tagihan</h3>
+                        <p class="fade-section text-gray-600">Tools yang dapat mempermudah dalam mengingatkan tagihan harian, mingguan, serta bulanan anda!.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-16 bg-gray-100 ">
+            <div class="container mx-auto px-8">
+                <h2 class="fade-section text-4xl font-bold text-center mb-12 text-gray-500 " style="color: #1a202c">Skills</h2>
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 text-center">
+                    <div class="fade-section text-gray-700 ">
+                        <i class="fade-section  text-6xl fab fa-html5 text-gray-500  mb-4"></i>
+                        <p>HTML</p>
+                    </div>
+                    <div class="fade-section text-gray-700 ">
+                        <i class="fade-section  text-6xl fab fa-css3-alt text-gray-500  mb-4"></i>
+                        <p>CSS</p>
+                    </div>
+                    <div class="fade-section text-gray-700 ">
+                        <i class="fade-section  text-6xl fab fa-js text-gray-500  mb-4"></i>
+                        <p>JavaScript</p>
+                    </div>
+                    <div class="fade-section text-gray-700">
+                        <i class="fade-section  text-6xl fab fa-react text-gray-500 mb-4"></i>
+                        <p>ReactJs</p>
+                    </div>
+                    <div class="fade-section text-gray-700">
+                        <i class="fade-section  text-6xl fab fa-vuejs text-gray-500 mb-4"></i>
+                        <p>VueJs</p>
+                    </div>
+                    <div class="fade-section text-gray-700">
+                        <i class="fade-section  text-6xl fab fa-php text-gray-500  mb-4"></i>
+                        <p>PHP</p>
+                    </div>
+                    <div class="fade-section text-gray-700">
+                        <i class="fade-section  text-6xl fab fa-laravel text-gray-500  mb-4"></i>
+                        <p>Laravel</p>
+                    </div>
+                    <div class="fade-section text-gray-700">
+                        <i class="fade-section  text-6xl fab fa-node-js text-gray-500 mb-4"></i>
+                        <p>NodeJs</p>
+                    </div>
+                    <div class="fade-section text-gray-700 ">
+                        <i class="fade-section  text-6xl fab fa-python text-gray-500 mb-4"></i>
+                        <p>Python</p>
+                    </div>
+                    <div class="fade-section text-gray-700 ">
+                        <i class="fade-section  text-6xl fab fa-bootstrap text-gray-500  mb-4"></i>
+                        <p>Bootstrap</p>
+                    </div>
+                    <div class="fade-section text-gray-700 ">
+                        <i class="fade-section  text-6xl fab fa-java text-gray-500  mb-4"></i>
+                        <p>Java</p>
+                    </div>
+                    <div class="fade-section text-gray-700">
+                        <i class="fade-section  text-6xl fab fa-flutter text-gray-500 mb-4"></i>
+                        <p>Flutter</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- price section -->
+        <!-- Pricing Section -->
+<section id="pricing" class="py-16" style="background-color: #1a202c;">
+    <div class="container mx-auto px-8">
+        <h2 class="fade-section text-4xl font-bold text-center mb-12 text-white">Pricing</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Pricing Card 1 -->
+            <div class="fade-section bg-white p-8 rounded-lg shadow-lg hover:shadow-2xl transition duration-300">
+                <h3 class="fade-section text-xl font-semibold mb-4" style="color: #1a202c;">Website Project</h3><p class="fade-section font-semibold">Start From</p>
+                <p class="fade-section text-4xl font-bold mb-4" style="color: #1a202c;">$30</p>
+                <ul class="fade-section  mb-6" style="color: #1a202c;">
+                    <li class="fade-section mb-2">1 Projects</li>
+                    <li class="fade-section mb-2">Premium Web Hosting</li>
+                    <li class="fade-section mb-2">Free Domain</li>
+                    <li class="fade-section mb-2">24/7 Support</li>
+                </ul>
+                <button class="fade-section w-full py-3 bg-[#1a202c] text-white rounded-lg hover:bg-gray-800 transition">Get Started</button>
+            </div>
+
+            <!-- Pricing Card 2 -->
+            <div class="fade-section bg-white p-8 rounded-lg shadow-lg hover:shadow-2xl transition duration-300">
+                <h3 class="fade-section text-xl font-semibold mb-4" style="color: #1a202c;">App Project</h3><p class="font-semibold">Start From</p>
+                <p class="fade-section text-4xl font-bold mb-4" style="color: #1a202c;">$320</p>
+                <ul class="fade-section  mb-6" style="color: #1a202c;">
+                    <li class="fade-section mb-2">1 Projects</li>
+                    <li class="fade-section mb-2">Premium App Server</li>
+                    <li class="fade-section mb-2">Free Publish (Play Store)</li>
+                    <li class="fade-section mb-2">24/7 Support</li>
+                </ul>
+                <button class="fade-section w-full py-3 bg-[#1a202c] text-white rounded-lg hover:bg-gray-800 transition">Get Started</button>
+            </div>
+            
+            <!-- Pricing Card 3 -->
+            <div class="fade-section bg-white p-8 rounded-lg shadow-lg hover:shadow-2xl transition duration-300">
+                <h3 class="fade-section  text-xl font-semibold mb-4" style="color: #1a202c;">ChatBot Maker</h3><p class="font-semibold">Start From</p>
+                <p class="fade-section  text-4xl font-bold mb-4" style="color: #1a202c;">$50</p>
+                <ul class="fade-section  mb-6" style="color: #1a202c;">
+                    <li class="fade-section  mb-2">1 Projects</li>
+                    <li class="fade-section  mb-2">Premium Server</li>
+                    <li class="fade-section  mb-2">Online 24/7</li>
+                    <li class="fade-section  mb-2">24/7 Support</li>
+                </ul>
+                <button class="w-full py-3 bg-[#1a202c] text-white rounded-lg hover:bg-gray-800 transition">Get Started</button>
+            </div>
+            
+            <!-- Pricing Card 4 -->
+            <div class="fade-section bg-white p-8 rounded-lg shadow-lg hover:shadow-2xl transition duration-300">
+                <h3 class="fade-section  text-xl font-semibold mb-4" style="color: #1a202c;">Web Hosting</h3><p class="font-semibold">Start From</p>
+                <p class="fade-section  text-4xl font-bold mb-4" style="color: #1a202c;">$28<span class="fade-section  text-sm">/month</span></p>
+                <ul class="fade-section  mb-6" style="color: #1a202c;">
+                    <li class="fade-section  mb-2">100 Website</li>
+                    <li class="fade-section  mb-2">Premium Server</li>
+                    <li class="fade-section  mb-2">Free Domain</li>
+                    <li class="fade-section  mb-2">24/7 Support</li>
+                </ul>
+                <button class="w-full py-3 bg-[#1a202c] text-white rounded-lg hover:bg-gray-800 transition">Get Started</button>
+            </div>
+            
+            <!-- Pricing Card 5 -->
+            <div class="fade-section  bg-white p-8 rounded-lg shadow-lg hover:shadow-2xl transition duration-300">
+                <h3 class="fade-section  text-xl font-semibold mb-4" style="color: #1a202c;">SEO</h3><p class="font-semibold">Start From</p>
+                <p class="fade-section  text-4xl font-bold mb-4" style="color: #1a202c;">$480<span class="fade-section  text-sm">/month</span></p>
+                <ul class="fade-section  mb-6" style="color: #1a202c;">
+                    <li class="fade-section  mb-2">High SEO Quality</li>
+                    <li class="fade-section  mb-2">SEO Optimation</li>
+                    <li class="fade-section  mb-2">24/7 Support</li>
+                </ul>
+                <button class="w-full py-3 bg-[#1a202c] text-white rounded-lg hover:bg-gray-800 transition">Get Started</button>
+            </div>
+            
+            <!-- Pricing Card 6 -->
+            <div class="fade-section  bg-white p-8 rounded-lg shadow-lg hover:shadow-2xl transition duration-300">
+                <h3 class="fade-section  text-xl font-semibold mb-4" style="color: #1a202c;">UI / UX Desaign</h3><p class="font-semibold">Start From</p>
+                <p class="fade-section  text-4xl font-bold mb-4" style="color: #1a202c;">$110</p>
+                <ul class="fade-section  mb-6" style="color: #1a202c;">
+                    <li class="fade-section  mb-2">Premium UI / UX Desaign</li>
+                    <li class="fade-section  mb-2">High Quality Desaign</li>
+                    <li class="fade-section  mb-2">100% Original</li>
+                    <li class="fade-section  mb-2">24/7 Support</li>
+                </ul>
+                <button class="w-full py-3 bg-[#1a202c] text-white rounded-lg hover:bg-gray-800 transition">Get Started</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section id="features" class="py-16 bg-gray-100" >
+    <div class="container mx-auto px-8">
+        <h2 class="fade-section  text-4xl font-bold text-center mb-12 text-gray-500" style="color: #1a202c;">Features</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Feature 1 -->
+            <div class="fade-section  bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300">
+                <h3 class="fade-section  text-xl font-semibold mb-4" style="color: #1a202c;">Responsive Design</h3>
+                <p class="fade-section  text-gray-600">All projects are designed to be responsive and mobile-friendly, ensuring a seamless user experience across devices.</p>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="fade-section  bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300">
+                <h3 class="fade-section  text-xl font-semibold mb-4" style="color: #1a202c;">SEO Optimized</h3>
+                <p class="fade-section  text-gray-600">Our websites are built with SEO best practices in mind, helping you rank higher in search engine results.</p>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="fade-section  bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300">
+                <h3 class="fade-section  text-xl font-semibold mb-4" style="color: #1a202c;">Fast Loading Speeds</h3>
+                <p class="fade-section  text-gray-600">We prioritize performance to ensure that your website loads quickly, enhancing user retention and satisfaction.</p>
+            </div>
+
+            <!-- Feature 4 -->
+            <div class="fade-section  bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300">
+                <h3 class="fade-section  text-xl font-semibold mb-4" style="color: #1a202c;">Custom Solutions</h3>
+                <p class="fade-section  text-gray-600">We provide tailored solutions to meet the unique needs of your business, ensuring the best fit for your requirements.</p>
+            </div>
+
+            <!-- Feature 5 -->
+            <div class="fade-section  bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300">
+                <h3 class="fade-section  text-xl font-semibold mb-4" style="color: #1a202c;">24/7 Support</h3>
+                <p class="fade-section  text-gray-600">Our dedicated support team is available around the clock to assist you with any issues or questions.</p>
+            </div>
+
+            <!-- Feature 6 -->
+            <div class="fade-section  bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300">
+                <h3 class="fade-section  text-xl font-semibold mb-4" style="color: #1a202c;">Regular Updates</h3>
+                <p class="fade-section  text-gray-600">We provide regular updates and maintenance to keep your site running smoothly and securely.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Hire Section -->
+<section id="hire" class="py-16 bg-gray-800">
+    <div class="container mx-auto px-8">
+        <h2 class="fade-section  text-4xl font-bold text-center mb-12" style="color: #fff;">Hire Me</h2>
+        <div class="max-w-4xl mx-auto space-y-6">
+            <!-- FAQ Item 1 -->
+            <div class="fade-section  bg-white shadow-md rounded-lg p-6">
+                <p class="fade-section  text-base" style="color: #1a202c;">
+                    Looking for a creative and reliable professional to bring your ideas to life? I’m here to help! With a strong expertise in web development and design, I deliver high-quality, modern websites tailored to your needs. Whether you’re building from scratch or revamping your current site, I’m ready to make your project a success. Let’s collaborate to turn your vision into a reality—hire me today and let’s get started!
+                </p>
+            </div>
+            
+            <div class="fade-section  bg-white shadow-md rounded-lg p-6">
+                <h3 class="fade-section  text-3xl font-semibold mb-4" style="color: #1a202c;">1.</h3>
+                <p class="fade-section  text-base" style="color: #1a202c;">
+                    Contact us to discuss further about the service you want.
+                </p>
+            </div>
+            
+            <div class="fade-section  bg-white shadow-md rounded-lg p-6">
+                <h3 class="fade-section  text-3xl font-semibold mb-4" style="color: #1a202c;">2.</h3>
+                <p class="fade-section  text-base" style="color: #1a202c;">
+                    Choose the service you want according to your needs.
+                </p>
+            </div>
+            
+            <div class="fade-section  bg-white shadow-md rounded-lg p-6">
+                <h3 class="fade-section  text-3xl font-semibold mb-4" style="color: #1a202c;">3.</h3>
+                <p class="fade-section  text-base" style="color: #1a202c;">
+                    Make an agreement and make payment according to the services you want in the previous agreement
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Why Choose Us Section -->
+<section id="why-choose-us" class="py-16 bg-white">
+  <div class="container mx-auto px-8">
+    <h2 class="fade-section  text-4xl font-bold text-center mb-12 text-gray-800">Why Choose Us?</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Feature 1 -->
+      <div class="fade-section  bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300">
+        <h3 class="fade-section  text-xl font-semibold text-center mb-2">Professional Expertise</h3>
+        <p class="fade-section  text-gray-600 text-center">We offer the best industry professionals to ensure the highest quality of work and support for your needs.</p>
+      </div>
+
+      <!-- Feature 2 -->
+      <div class="fade-section  bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300">
+        <h3 class="fade-section  text-xl font-semibold text-center mb-2">Timely Delivery</h3>
+        <p class="fade-section  text-gray-600 text-center">We ensure that your projects are completed within the agreed timeframe, without compromising quality.</p>
+      </div>
+
+      <!-- Feature 3 -->
+      <div class="fade-section  bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300">
+        <h3 class="fade-section  text-xl font-semibold text-center mb-2">Customer Support</h3>
+        <p class="fade-section  text-gray-600 text-center">We provide exceptional customer support, ready to assist you with any questions or concerns you may have.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<!-- FAQ Section -->
+<section id="faq" class="py-16 bg-gray-800">
+    <div class="container mx-auto px-8">
+        <h2 class="fade-section  text-4xl font-bold text-center mb-12" style="color: #fff;">Frequently Asked Questions</h2>
+        <div class="max-w-4xl mx-auto space-y-6">
+            <!-- FAQ Item 1 -->
+            <div class="fade-section  bg-white shadow-md rounded-lg p-6">
+                <h3 class="fade-section  text-xl font-semibold mb-4" style="color: #1a202c;">What is your refund policy?</h3>
+                <p class="fade-section  text-base" style="color: #1a202c;">
+                    We offer a 30-day money-back guarantee on all plans. If you're not satisfied with the service, you can cancel within 30 days and receive a full refund.
+                </p>
+            </div>
+
+            <!-- FAQ Item 2 -->
+            <div class="fade-section  bg-white shadow-md rounded-lg p-6">
+                <h3 class="fade-section  text-xl font-semibold mb-4" style="color: #1a202c;">Can I upgrade my plan later?</h3>
+                <p class="fade-section  text-base" style="color: #1a202c;">
+                    Yes, you can upgrade your plan at any time through your account settings or by contacting our support team.
+                </p>
+            </div>
+
+            <!-- FAQ Item 3 -->
+            <div class="fade-section  bg-white shadow-md rounded-lg p-6">
+                <h3 class="fade-section  text-xl font-semibold mb-4" style="color: #1a202c;">Do you offer customer support?</h3>
+                <p class="fade-section  text-base" style="color: #1a202c;">
+                    Yes, we provide 24/7 customer support via email, chat, and phone to assist with any issues you may have.
+                </p>
+            </div>
+
+            <!-- FAQ Item 4 -->
+            <div class="fade-section  bg-white shadow-md rounded-lg p-6">
+                <h3 class="fade-section  text-xl font-semibold mb-4" style="color: #1a202c;">Is there a free trial available?</h3>
+                <p class="fade-section  text-base" style="color: #1a202c;">
+                    We offer a 7-day free trial on our basic plan. No credit card is required, and you can cancel at any time.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+        <!-- Contact Section -->
+<section id="contact" class="py-16">
+    <div class="container mx-auto px-8">
+        <h2 class="fade-section  text-4xl font-bold text-center mb-12 text-gray-800">Contact Me</h2>
+        <form action="https://formspree.io/f/xyzyywdq" method="POST" class="max-w-lg mx-auto bg-white p-6 rounded-lg shadow-lg">
+            <div class="fade-section  mb-4">
+                <label for="name" class="block text-gray-700">Name</label>
+                <input type="text" id="name" name="name" required class="w-full p-2 border border-gray-300 rounded-lg">
+            </div>
+            <div class="fade-section  mb-4">
+                <label for="email" class="block text-gray-700">Email</label>
+                <input type="email" id="email" name="email" required class="w-full p-2 border border-gray-300 rounded-lg">
+            </div>
+            <div class="fade-section  mb-4">
+                <label for="message" class="block text-gray-700">Message</label>
+                <textarea id="message" name="message" rows="4" required class="w-full p-2 border border-gray-300 rounded-lg"></textarea>
+            </div>
+            <button type="submit" class="w-full py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-800 transition font-semibold">Send Message</button>
+        </form>
+    </div>
+</section>
+
+        <!-- Footer Section -->
+<footer class="fade-section  bg-gray-900 text-white py-12">
+    <div class="container mx-auto px-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- About -->
+            <div class="space-y-4">
+                <h3 class="fade-section  text-2xl font-bold">JDev</h3>
+                <p class="fade-section  text-gray-400">Bringing the latest in modern web design and development to help your business grow.</p>
+            </div>
+            <!-- Quick Links -->
+            <div class="space-y-4">
+                <h3 class="fade-section  text-2xl font-bold">Quick Links</h3>
+                <ul class="space-y-2">
+                    <li><a href="#hero" class=fade-section hover:text-gray-500 transition">Home</a></li>
+                    <li><a href="#about" class=fade-section hover:text-gray-500 transition">About</a></li>
+                    <li><a href="#projects" class=fade-section hover:text-gray-500 transition">Projects</a></li>
+                    <li><a href="#skills" class=fade-section hover:text-gray-500 transition">Skills</a></li>
+                    <li><a href="#contact" class=fade-section hover:text-gray-500 transition">Contact</a></li>
+                </ul>
+            </div>
+            <!-- Contact Info & Social Media -->
+            <div class="space-y-4">
+                <h3 class="fade-section  text-2xl font-bold">Get In Touch</h3>
+                <p class="fade-section  text-gray-400">WhatsApp: +62 838-9877-7054</p>
+                <p class="fade-section  text-gray-400">Email: support@weplystudio.my.id</p>
+                <div class="flex space-x-4">
+                    <!-- Social Media Icons -->
+                    <a href="#" class="fade-section  text-gray-400 hover:text-gray-500 transition">
+                        <i class="fab fa-facebook-f text-2xl"></i>
+                    </a>
+                    <a href="#" class="fade-section  text-gray-400 hover:text-gray-500 transition">
+                        <i class="fab fa-twitter text-2xl"></i>
+                    </a>
+                    <a href="#" class="fade-section  text-gray-400 hover:text-gray-500 transition">
+                        <i class="fab fa-linkedin-in text-2xl"></i>
+                    </a>
+                    <a href="#" class="fade-section  text-gray-400 hover:text-gray-500 transition">
+                        <i class="fab fa-instagram text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Bottom Line -->
+        <div class="mt-12 border-t border-gray-700 pt-6 text-center">
+            <p class="fade-section  text-gray-400">Designed and Developed by JDev. Elevating Your Digital Presence.</p>
+        </div>
+    </div>
+</footer>
+    </div>
+    
+    <button id="scrollToTopBtn" class="fixed bottom-5 right-5 bg-gray-800 text-white p-3 rounded-full shadow-lg transition-opacity duration-300 opacity-0 pointer-events-none" style="display: none;">
+    <i class="fa fa-arrow-up text-white"></i>
+  </button>
+    
+    <script>
+        // Typing effect
+        const texts = ["Developer", "Designer", "Photographer", "Videographer", "Editor", "Human"];
+        let index = 0;
+        let charIndex = 0;
+        const typingText = document.getElementById("typing-text");
+
+        function type() {
+            if (charIndex < texts[index].length) {
+                typingText.textContent += texts[index].charAt(charIndex);
+                charIndex++;
+                setTimeout(type, 150);
+            } else {
+                setTimeout(erase, 2000);
+            }
+        }
+
+        function erase() {
+            if (charIndex > 0) {
+                typingText.textContent = texts[index].substring(0, charIndex - 1);
+                charIndex--;
+                setTimeout(erase, 100);
+            } else {
+                index = (index + 1) % texts.length;
+                setTimeout(type, 500);
+            }
+        }
+
+        // Start typing effect
+        document.addEventListener("DOMContentLoaded", type);
+    </script>
+    <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const sidemenu = document.getElementById('sidemenu');
+    const closeBtn = document.getElementById('close-btn');
+
+    menuBtn.addEventListener('click', () => {
+      sidemenu.classList.toggle('-translate-x-full');
+    });
+
+    closeBtn.addEventListener('click', () => {
+      sidemenu.classList.add('-translate-x-full');
+    });
+  </script>
+</body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
+<script>
+        document.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('.fade-section');
+            
+            sections.forEach(section => {
+                const rect = section.getBoundingClientRect();
+                const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+                
+                // Cek apakah elemen berada di viewport
+                if (rect.top <= windowHeight && rect.bottom >= 0) {
+                    section.classList.add('visible');  // Fade in
+                } else {
+                    section.classList.remove('visible');  // Fade out
+                }
+            });
+        });
+    </script>
+    <style>
+        /* Custom CSS for fade in/out animations */
+        .fade-section {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+    <script>
+    // Mengatur tampilan tombol
+    const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+    window.onscroll = function() {
+      if (document.body.scrollTop > window.innerHeight / 2 || document.documentElement.scrollTop > window.innerHeight / 2) {
+        scrollToTopBtn.style.display = 'block';
+        setTimeout(() => {
+          scrollToTopBtn.classList.remove('opacity-0', 'pointer-events-none');
+          scrollToTopBtn.classList.add('opacity-100', 'pointer-events-auto');
+        }, 10);
+      } else {
+        scrollToTopBtn.style.display = 'none';
+        scrollToTopBtn.classList.remove('opacity-100', 'pointer-events-auto');
+        scrollToTopBtn.classList.add('opacity-0', 'pointer-events-none');
+      }
+    };
+
+    // Scroll ke atas saat tombol diklik
+    scrollToTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+  <script>
+      function scrambleText(element, finalText, interval, totalDuration) {
+    const characters = 'AbCdEfGhIjKlMnOpQrStUvWxYz1627384950&#$()/?)£€¥¥£∆¶';
+    let currentText = '';
+    let count = 0;
+    const steps = Math.floor(totalDuration / interval); // Jumlah langkah animasi
+
+    const scrambleInterval = setInterval(() => {
+        currentText = finalText
+            .split('')
+            .map((char, i) => {
+                // Acak teks untuk lebih banyak langkah dibandingkan panjang teks
+                if (i < Math.floor((count / steps) * finalText.length)) return finalText[i];
+                return characters[Math.floor(Math.random() * characters.length)];
+            })
+            .join('');
+
+        element.textContent = currentText;
+        count += 1;
+
+        // Jika sudah melebihi langkah yang ditentukan, hentikan interval
+        if (count > steps) {
+            clearInterval(scrambleInterval);
+            element.textContent = finalText; // Pastikan teks final ditampilkan
+        }
+    }, interval);
+}
+
+// Penggunaan:
+const element = document.querySelector('.scramble-text');
+scrambleText(element, 'JDev', 50, 3000);
+  </script>
+  <script src="https://kit.fontawesome.com/73e99931c3.js" crossorigin="anonymous"></script>
