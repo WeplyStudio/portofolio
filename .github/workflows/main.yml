@@ -1,0 +1,16 @@
+# .github/workflows/unzip.yml
+name: Unzip File
+
+on:
+  push:
+    paths:
+      - '**.zip'
+
+jobs:
+  unzip:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Unzip file
+        run: |
+          unzip projects.zip -d unzipped-folder
