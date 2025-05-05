@@ -13,4 +13,4 @@ jobs:
       - uses: actions/checkout@v3
       - name: Unzip file
         run: |
-          unzip projects.zip -d unzipped-folder
+          unzip project.zip -d unzipped-folder
